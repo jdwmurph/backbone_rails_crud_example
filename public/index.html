@@ -8,17 +8,41 @@
   <script src="javascripts/libraries/underscore.js"></script>
   <script src="javascripts/libraries/backbone.js"></script>
 
+  <!-- templates -->
+
+  <script type="javascript/template" class="user-template">
+    <%- user.email %>
+    <button class="delete-button">Delete</button>
+    <button class="edit-button">Edit</button>
+  </script>
+
+  <script type="javascript/template" class="edit-template">
+    <form>
+      <input type='text' name="email" value ="<%-user.email%>" class="email">
+      <input type='submit'>
+    </form>
+  </script>
+
   <!-- models -->
   <script src="javascripts/backbone/models/user.js"></script>
   <!-- views -->
-  <script src="javascripts/backbone/views/users_collection.js"></script>
+  <script src="javascripts/backbone/views/users/UserView.js"></script>
+  <script src="javascripts/backbone/views/users/UserListView.js"></script>
   <!-- collections -->
-  <script src="javascripts/backbone/collections/users_collection.js"></script>
+  <script src="javascripts/backbone/collections/UsersCollection.js"></script>
+
   <!-- the app -->
   <script src="javascripts/backbone/app.js"></script>
 
+
 </head>
 <body>
+Create a user:
+<form action="/users" method="post" class="user-form">
+  <input type="text" class="email-submit" placeholder="email">
+  <input type="text" class="password-submit" placeholder="password">
+  <input type="submit">
+</form>
 
 </body>
 </html>

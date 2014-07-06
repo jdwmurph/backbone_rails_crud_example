@@ -10,6 +10,7 @@ var CrudExampleApp = CrudExampleApp || {
   }
 };
 
-var UsersCollection = Backbone.Collection.extend({
-  model: User
+CrudExampleApp.Collections.UserCollection = Backbone.Collection.extend({
+  model: CrudExampleApp.Models.User,
+  url: 'users'
 })

@@ -10,4 +10,4 @@ var CrudExampleApp = CrudExampleApp || {
   }
 };
 
-var User = Backbone.Model.extend({})
+CrudExampleApp.Models.User = Backbone.Model.extend({})
