@@ -2,4 +2,4 @@
 
 <h3>Description: This is an example CRUD app that uses Backbone and Rails</h3>
 
-![screenshot](./assets/images/screenshot.tiff)
+![screenshot](app/assets/images/screenshot.tiff?raw=true)
