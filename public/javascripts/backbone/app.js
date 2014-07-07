@@ -41,8 +41,7 @@ CrudExampleApp.Router = Backbone.Router.extend({
     this.collection.fetch({async:false});
   },
   routes : {
-    ''                         : 'index',
-    'users/:id'              : 'findById'
+    ''                         : 'index'
   },
   index: function(){
 
@@ -51,16 +50,6 @@ CrudExampleApp.Router = Backbone.Router.extend({
     });
     CrudExampleApp.ViewManager.display(userListView);
     return this;
-  },
-  findById: function(id){
-    var modelId = parseInt(id)
-    var model = CrudExampleApp.router.collection.findWhere({
-      id: modelId
-      });
-    var showView = new CrudExampleApp.Views.ShowView({
-      model: model
-    });
-    CrudExampleApp.ViewManager.display(showView);
   }
 })
 
